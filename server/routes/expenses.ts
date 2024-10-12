@@ -9,7 +9,6 @@ import { createExpenseSchema } from '../sharedTypes'
 export const expensesRoute = new Hono()
 .get("/", getUser, async (c) => {
     const user = c.var.user 
-
     const expenses = await db
         .select()
         .from(expensesTABLE)
@@ -25,6 +24,7 @@ export const expensesRoute = new Hono()
 
     const result = await db.insert(expensesTABLE).values({
         ...expense,
+        amount: expense.amount.toString(),
         userId: user.id
     }).returning()
 

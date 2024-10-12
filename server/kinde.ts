@@ -1,4 +1,5 @@
-import {createKindeServerClient, GrantType, SessionManager, UserType } from "@kinde-oss/kinde-typescript-sdk";
+import {createKindeServerClient, GrantType } from "@kinde-oss/kinde-typescript-sdk";
+import { type SessionManager, type UserType } from "@kinde-oss/kinde-typescript-sdk"
 import { type Context } from "hono"
 import { getCookie, setCookie, deleteCookie } from "hono/cookie"
 import { createMiddleware } from 'hono/factory'
@@ -42,7 +43,6 @@ export const sessionManager = (c: Context): SessionManager => ({
     })
   }
 });
-
 
 // Hono middleware factory
 type Env = {

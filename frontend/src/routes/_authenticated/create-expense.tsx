@@ -27,7 +27,7 @@ function CreateExpense() {
     resolver: zodResolver(createExpenseSchema),
     defaultValues: {
       title: '',
-      amount: '10',
+      amount: 0,
     },
   })
 
