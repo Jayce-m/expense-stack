@@ -45,6 +45,7 @@ function Expenses() {
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
+  const expenseTotal = new Intl.NumberFormat('en-US').format(Number(total?.total));
 
   useEffect(() => {
     async function fetchExpenses() {
@@ -116,7 +117,7 @@ function Expenses() {
         <TableFooter>
           <TableRow>
             <TableCell colSpan={3}>Total</TableCell>
-            <TableCell className="text-right">{total?.total}</TableCell>
+            <TableCell className="text-right">{`$ ${expenseTotal}`}</TableCell>
           </TableRow>
         </TableFooter>
       </Table>

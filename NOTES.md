@@ -36,3 +36,7 @@ https://www.youtube.com/watch?v=jXyTIQOfTTk
 
 Useful reading for validation of numbers in forms:
 https://github.com/shadcn-ui/ui/issues/421
+
+
+Useful for making am money input mask
+https://gist.github.com/Sutil/5285f2e5a912dcf14fc23393dac97fed
