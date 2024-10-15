@@ -5,7 +5,7 @@ const Login = () => {
     return (
         <div>
             You have to  
-            <a href="/api/login">Login!</a>
+            <a href="/api/login"> Login!</a>
         </div>
     )
 }
@@ -16,7 +16,6 @@ function Component() {
     if (!user) {
         return <Login />
     }
-
     return <Outlet />
 }
 
